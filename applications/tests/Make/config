@@ -1,0 +1,17 @@
+# The config file contains library paths and the libraries that have to be linked during compilation
+#
+# Specify LIBPATH
+#
+#LIBPATH="-L/home/smalik/development/PROJECTS_CXX/essentialTraining/lib/variables \
+#         -L/home/smalik/development/PROJECTS_CXX/essentialTraining/lib/mathOperations"
+#
+# Specify library names
+#
+#LIBS="-lgreeting \
+#      -laddSub"
+
+#############
+#Vector tests
+#############
+LIBPATH="-L/home/smalik/development/PROJECTS_CXX/EPFL/lib/utility/vectors"
+LIBS="-lvector2D"
