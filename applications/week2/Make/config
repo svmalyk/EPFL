@@ -1,0 +1,30 @@
+# The config file contains library paths and the libraries that have to be linked during compilation
+#
+# Specify LIBPATH
+#
+#LIBPATH="-L/home/smalik/development/PROJECTS_CXX/essentialTraining/lib/variables \
+#         -L/home/smalik/development/PROJECTS_CXX/essentialTraining/lib/mathOperations"
+#         
+# Specify library names
+#
+#LIBS="-llib1 \
+#      -llib2 \
+#      -llib3"
+###########################################################
+#
+# Uncomment to run banque.C
+#
+#LIBPATH="-L/home/smalik/development/PROJECTS_CXX/EPFL/lib/week2"
+#LIBS="-lclient \
+#      -lbanque \
+#      -laccount"
+#
+#
+#
+# Uncomment to run supermarche.C
+#
+LIBPATH="-L/home/smalik/development/PROJECTS_CXX/EPFL/lib/week2/supermarche"
+LIBS="-lcaisse \
+      -lcaddie \
+      -lachat \
+      -larticle"
