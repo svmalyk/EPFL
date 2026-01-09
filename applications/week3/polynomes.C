@@ -1,63 +1,33 @@
 #include <iostream>
 //#include <complex>
-//#include "../../lnInclude/week3/nombres_complex/complex.H"
-#include "../../lnInclude/week3/nombres_complex/complexe.H"
+#include "../../lnInclude/week3/polynomes/polynome.H"
 
 int main(){
 
-  Complexe defaut;
-  Complexe zero(0.0,0.0);
-  Complexe one(1.0,0.0);
-  Complexe i(0.0,1.0);
-  Complexe a(2.0,-5.0);
-  Complexe j;
+  Polynome P1({1.0, 12.0, 3.0});
 
-//std::cout << zero << std::endl;
+  Polynome P2;
+  //P2.degree();
+  Polynome P3({3.0});
 
-  std::cout << zero << " ==? " << defaut;
-  if (zero == defaut) std::cout << " oui" << std::endl;
-  else std::cout << " non" << std::endl;
-  
-  std::cout << zero << " ==? " << i;
-  if (zero == i) std::cout << " oui" << std::endl;
-  else std::cout << " non" << std::endl;
+  Polynome P4({2.0,1.3});
 
-  std::cout << std::endl;
-  j = one + i;
+  //std::cout << "Degree of P1: " << P1.degree() << std::endl;
+  //std::cout << "Degree of P2: " << P2.degree() << std::endl;
+  //std::cout << "Degree of P3: " << P3.degree() << std::endl;
 
-  std::cout << one << " + " << i << " = " << j << std::endl;
+  std::cout << "Polynomial P1: " << P1 << std::endl;
+  //std::cout << "Polynomial P2: " << P2 << std::endl;
+  //std::cout << "Polynomial P3: " << P3 << std::endl;
+  //std::cout << "Polynomial P4: " << P4 << std::endl;
 
-  std::cout << std::endl;
+  std::cout << "Multiplication of P1 and P4:" << std::endl;
+  std::cout << P1*P4 << std::endl;
 
-  Complexe trois(one);
-  trois += one;
-  trois += 1.0;
-  std::cout << one << " + " << one << " + 1.0 = " << trois << std::endl;
+  //P1*=P4;
 
-  std::cout << std::endl;
-
-  Complexe deux(trois);
-  deux -= one;
-  std::cout << trois << " - " << one << " = " << deux << std::endl;
-
-  trois =  1.0 + deux;
-  std::cout << "1.0 + " << deux << " = " << trois << std::endl;
-
-  Complexe z(i*i);
-  std::cout << i << " * " << i << " = " << z << std::endl;
-
- std::cout << " z = " << z << std::endl;
-  Complexe k(2.0,-3.0);
-  z = k;
-  z *= 2.0;
-  z *= i;
-  
-  std::cout << k << " * 2.0 * " << i << " = " << z << std::endl;
-  z = 2.0*k*i/2.0;
-
-  //std::cout << z << std::endl;
-  //z = 2.0 * k * i / 1.0;
-  std::cout << " 2.0 * " << k << " * " << i << " / 2.0 = " << z << std::endl;
+  std::cout << "Multiplication with a constant 3:" << std::endl;
+  std::cout << P4*31 << std::endl;
 
 return 0;
 

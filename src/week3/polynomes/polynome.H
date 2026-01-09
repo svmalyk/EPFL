@@ -35,9 +35,10 @@ implementation file:
 #define POLYNOME_H
 
 #include <iostream>
+#include <vector>
 
 //Defining a typedef
-typedef size_t Degree; (PascalCase)
+typedef size_t Degree; //(PascalCase)
 
 class Polynome{
 
@@ -45,7 +46,9 @@ class Polynome{
     Data members: Store the state of an object.
     Eg: In player class we can keep track of "score" and "lives"
 ********************************************************************/
-    std::vector<double> p_;
+    std::vector<double> coeffs_;
+    int nbOfTerms_ = coeffs_.size();
+
 /********************************************************************
     Acces rights: default (when nothing is specified) --> private)
     Public   : can be accessed from anywhere in the program
@@ -117,10 +120,10 @@ public:
 
 ********************************************************************/
 // Default Constructor
-   Polynome();
+  Polynome();
 
 // Overloaded Constructor -
-    //none
+  Polynome(std::vector<double> );
 
 /********************************************************************
     Destructors are used to clean up ressources the object may have
@@ -162,9 +165,26 @@ public:
 //       2. Pass object by const reference unless you need to modify them. 
 //       3. Use const with pointers when appropriate. 
 
-Degree degree();
+int degree() const;
 
+std::ostream& displayPolynom(std::ostream& ) const;
+
+
+Polynome& operator*=(Polynome const& );
+
+// la multiplication aura besoin d'acceder à p 
+friend const Polynome operator*(Polynome, Polynome const& );
+
+Polynome& operator*=(double );
 
 };//end-of-class-Polynome
+
+std::ostream& operator<<(std::ostream&, Polynome const&);
+
+const Polynome operator*(Polynome, Polynome const& );
+
+Polynome operator*(double, Polynome&);
+
+Polynome operator*(Polynome& ,double);
 
 #endif

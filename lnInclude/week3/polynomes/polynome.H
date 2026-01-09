@@ -1,0 +1,1 @@
+/home/smalik/development/PROJECTS_CXX/EPFL/src/week3/polynomes/polynome.H
