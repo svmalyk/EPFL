@@ -1,0 +1,25 @@
+# The config file contains library paths and the libraries that have to be linked during compilation
+#
+# Specify LIBPATH
+#
+#LIBPATH="-L/home/smalik/development/PROJECTS_CXX/essentialTraining/lib/variables \
+#         -L/home/smalik/development/PROJECTS_CXX/essentialTraining/lib/mathOperations"
+#         
+# Specify library names
+#
+#LIBS="-llib1 \
+#      -llib2 \
+#      -llib3"
+###########################################################
+#
+# Uncomment to run vehicule.C
+#
+#LIBPATH="-L/home/smalik/development/PROJECTS_CXX/EPFL/lib/week4/vehicule"
+#LIBS="-lvoiture \
+#      -lavion \
+#      -lvehicule"
+#
+# Uncomment to run vector.C
+#
+LIBPATH="-L/home/smalik/development/PROJECTS_CXX/EPFL/lib/week4/vector"
+LIBS="-lvector"
