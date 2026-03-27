@@ -25,21 +25,22 @@ header file:
     Header file contains class definitions and function
     declarations (prototypes).
 Class
-    @namespace::vector2D
+    @namespace::
 Description
     description of the class.
 implementation file:
-    unitVector.C
+    formes.C
 \*---------------------------------------------------------------------------*/
-#ifndef UNITVECTOR_H  // include guard
-#define UNITVECTOR_H
+#ifndef FORMESABSTRACT_H  // include guard
+#define FORMESABSTRACT_H
 
 #include <iostream>
+#include <numbers>
 #include <vector>
-#include <cmath>
-#include "cercle.H"
+//#include <cmath>
+//#include "vector.H"
 
-class UnitVector : public Vector {
+class FormeAbstract {
 
 /********************************************************************
     Data members: Store the state of an object.
@@ -119,11 +120,10 @@ public:
 
 ********************************************************************/
 // Default Constructor
-    UnitVector();
+    FormeAbstract();
 
 // Overloaded Constructor
-   UnitVector(double, double, double);
-    UnitVector(double, double);
+   
 
 /********************************************************************
     Destructors are used to clean up ressources the object may have
@@ -136,7 +136,7 @@ public:
     }
 ********************************************************************/
 
-    ~UnitVector();
+    ~FormeAbstract();
 
 /********************************************************************
     Methods that do not modify anything in the object are called
@@ -155,15 +155,16 @@ public:
     Methods that modify the state of an object are called "actions"
 
 ********************************************************************/
-    // setters (manipulateurs)
+// setters (manipulateurs)
 
-    // methods
+// methods
+  virtual double aire() const = 0;
 
-    friend double angle(const UnitVector& , const UnitVector& );
+  virtual void description();
 
-};//end-of-class-unitvector
+};//end-of-class-formeabstract
 
 // External Methods
- 
+void affichageDesc(FormeAbstract& f);
 
 #endif

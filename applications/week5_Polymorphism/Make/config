@@ -1,0 +1,22 @@
+# The config file contains library paths and the libraries that have to be linked during compilation
+#
+# Specify LIBPATH
+#
+#LIBPATH="-L/home/smalik/development/PROJECTS_CXX/essentialTraining/lib/variables \
+#         -L/home/smalik/development/PROJECTS_CXX/essentialTraining/lib/mathOperations"
+#         
+# Specify library names
+#
+#LIBS="-llib1 \
+#      -llib2 \
+#      -llib3"
+###########################################################
+#
+# Uncomment to run formes.C
+#
+LIBPATH="-L/home/smalik/development/PROJECTS_CXX/EPFL/lib/week5_Polymorphism/formes"
+LIBS="-lformes \
+      -lcercle \
+      -lformesAbstract \
+      -lcercleAbstract \
+      -ltriangleAbstract"

@@ -25,21 +25,19 @@ header file:
     Header file contains class definitions and function
     declarations (prototypes).
 Class
-    @namespace::vector2D
+    @namespace::
 Description
     description of the class.
 implementation file:
-    unitVector.C
+    
 \*---------------------------------------------------------------------------*/
-#ifndef UNITVECTOR_H  // include guard
-#define UNITVECTOR_H
+#ifndef CERCLE_H  // include guard
+#define CERCLE_H
 
 #include <iostream>
-#include <vector>
-#include <cmath>
-#include "cercle.H"
+#include "formes.hpp"
 
-class UnitVector : public Vector {
+class Cercle : public Forme {
 
 /********************************************************************
     Data members: Store the state of an object.
@@ -119,11 +117,10 @@ public:
 
 ********************************************************************/
 // Default Constructor
-    UnitVector();
+    Cercle();
 
 // Overloaded Constructor
-   UnitVector(double, double, double);
-    UnitVector(double, double);
+   
 
 /********************************************************************
     Destructors are used to clean up ressources the object may have
@@ -136,7 +133,7 @@ public:
     }
 ********************************************************************/
 
-    ~UnitVector();
+    ~Cercle();
 
 /********************************************************************
     Methods that do not modify anything in the object are called
@@ -159,9 +156,9 @@ public:
 
     // methods
 
-    friend double angle(const UnitVector& , const UnitVector& );
+    virtual void description() override;
 
-};//end-of-class-unitvector
+};//end-of-class-cercle
 
 // External Methods
  

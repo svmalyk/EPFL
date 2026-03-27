@@ -1,0 +1,1 @@
+/home/smalik/development/PROJECTS_CXX/EPFL/src/week5_Polymorphism/figures/triangle.hpp

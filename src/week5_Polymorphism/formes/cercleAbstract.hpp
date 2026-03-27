@@ -25,21 +25,20 @@ header file:
     Header file contains class definitions and function
     declarations (prototypes).
 Class
-    @namespace::vector2D
+    @namespace::
 Description
     description of the class.
 implementation file:
-    unitVector.C
+    
 \*---------------------------------------------------------------------------*/
-#ifndef UNITVECTOR_H  // include guard
-#define UNITVECTOR_H
+#ifndef CERCLEABSTRACT_H  // include guard
+#define CERCLEABSTRACT_H
 
 #include <iostream>
-#include <vector>
-#include <cmath>
-#include "cercle.H"
+#include <numbers>
+#include "formesAbstract.hpp"
 
-class UnitVector : public Vector {
+class CercleAbstract : public FormeAbstract {
 
 /********************************************************************
     Data members: Store the state of an object.
@@ -56,7 +55,8 @@ class UnitVector : public Vector {
 
 private:
     // declarations of data members (attributes)
-   
+    double radius{0.0};
+
 
 /********************************************************************
     Function members (a.k.a. methods): Define the behaviour of the
@@ -119,11 +119,10 @@ public:
 
 ********************************************************************/
 // Default Constructor
-    UnitVector();
+    CercleAbstract();
 
 // Overloaded Constructor
-   UnitVector(double, double, double);
-    UnitVector(double, double);
+  CercleAbstract(double);
 
 /********************************************************************
     Destructors are used to clean up ressources the object may have
@@ -136,7 +135,7 @@ public:
     }
 ********************************************************************/
 
-    ~UnitVector();
+    ~CercleAbstract();
 
 /********************************************************************
     Methods that do not modify anything in the object are called
@@ -159,9 +158,11 @@ public:
 
     // methods
 
-    friend double angle(const UnitVector& , const UnitVector& );
+    virtual void description() override;
 
-};//end-of-class-unitvector
+    virtual double aire() const override;
+
+};//end-of-class-cercleabstract
 
 // External Methods
  
